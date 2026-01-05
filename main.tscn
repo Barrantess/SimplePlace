@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtmco7oreo0wm"]
+
+[ext_resource type="Texture2D" uid="uid://c10mapl8j3uev" path="res://assets/Background.png" id="1_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://d0r111a7k5gf7" path="res://assets/OldmanHouse.png" id="2_h2yge"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Menu" type="Panel" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="TextureRect" type="TextureRect" parent="Menu"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_0xm2m")
+
+[node name="Button" type="Button" parent="Menu"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 580.0
+offset_top = 300.0
+offset_right = 636.0
+offset_bottom = 340.0
+icon = ExtResource("2_h2yge")
+flat = true
