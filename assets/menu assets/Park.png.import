@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cjxmoeqiokcqo"
-path="res://.godot/imported/Park.png-1d0c9900a039e02e9305c19f900ba7bd.ctex"
+path="res://.godot/imported/Park.png-ed3a2b4e3dbb495ca68f880d1484414a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Park.png"
-dest_files=["res://.godot/imported/Park.png-1d0c9900a039e02e9305c19f900ba7bd.ctex"]
+source_file="res://assets/menu assets/Park.png"
+dest_files=["res://.godot/imported/Park.png-ed3a2b4e3dbb495ca68f880d1484414a.ctex"]
 
 [params]
 

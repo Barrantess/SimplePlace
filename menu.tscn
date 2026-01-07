@@ -1,0 +1,91 @@
+[gd_scene load_steps=8 format=3 uid="uid://hht8erx60ei7"]
+
+[ext_resource type="Script" uid="uid://ov5dhpm8wevp" path="res://scripts/menu.gd" id="1_kk3ma"]
+[ext_resource type="Texture2D" uid="uid://c10mapl8j3uev" path="res://assets/menu assets/Background.png" id="2_nrnbx"]
+[ext_resource type="Texture2D" uid="uid://d0r111a7k5gf7" path="res://assets/menu assets/OldmanHouse.png" id="3_iqepy"]
+[ext_resource type="Texture2D" uid="uid://bj6bhk78pxdi0" path="res://assets/menu assets/Bakery.png" id="5_dwrpx"]
+[ext_resource type="Texture2D" uid="uid://cjxmoeqiokcqo" path="res://assets/menu assets/Park.png" id="6_g7jxm"]
+[ext_resource type="Texture2D" uid="uid://8jbjn27ukxlq" path="res://assets/glow.png" id="7_jspdm"]
+[ext_resource type="Texture2D" uid="uid://dfig4yu6weq1g" path="res://assets/menu assets/Xit.png" id="8_oxnod"]
+
+[node name="Menu" type="Panel"]
+offset_right = 320.0
+offset_bottom = 180.0
+script = ExtResource("1_kk3ma")
+tween_intensity = 1.2
+tween_duration = 1.3
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 360.0
+texture = ExtResource("2_nrnbx")
+
+[node name="House" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 285.0
+offset_top = 177.0
+offset_right = 341.0
+offset_bottom = 217.0
+icon = ExtResource("3_iqepy")
+flat = true
+
+[node name="Bakery" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 20.0
+offset_top = 143.0
+offset_right = 76.0
+offset_bottom = 183.0
+icon = ExtResource("5_dwrpx")
+flat = true
+
+[node name="Park" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 530.0
+offset_top = 236.0
+offset_right = 586.0
+offset_bottom = 276.0
+icon = ExtResource("6_g7jxm")
+flat = true
+
+[node name="Exit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 309.0
+offset_right = 52.0
+offset_bottom = 349.0
+icon = ExtResource("8_oxnod")
+flat = true
+
+[node name="GlowHouse" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(313, 201)
+scale = Vector2(0.88, 0.88)
+texture = ExtResource("7_jspdm")
+
+[node name="GlowBakery" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(50, 164.00003)
+scale = Vector2(0.7744, 0.7744)
+texture = ExtResource("7_jspdm")
+
+[node name="GlowPark" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(561, 262)
+scale = Vector2(0.681472, 0.681472)
+texture = ExtResource("7_jspdm")
+
+[node name="Fantasma" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(32, 330.00003)
+scale = Vector2(0.65, 0.66)
+texture = ExtResource("7_jspdm")
+
+[connection signal="pressed" from="House" to="." method="buttonHousePressed"]
+[connection signal="pressed" from="Bakery" to="." method="buttonBakeryPressed"]
+[connection signal="pressed" from="Park" to="." method="buttonParkPressed"]
+[connection signal="pressed" from="Exit" to="." method="buttonExitPressed"]

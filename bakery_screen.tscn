@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://vp8vb2nlcear"]
+
+[ext_resource type="Texture2D" uid="uid://bj6bhk78pxdi0" path="res://assets/menu assets/Bakery.png" id="1_f5lxx"]
+
+[node name="BakeryScreen" type="Panel"]
+offset_right = 640.0
+offset_bottom = 360.0
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 293.0
+offset_top = 162.0
+offset_right = 341.0
+offset_bottom = 202.0
+texture_normal = ExtResource("1_f5lxx")

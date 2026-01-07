@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://dufgx1djtp20j"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_2sacl"]
+
+[node name="HouseScreen" type="Panel"]
+offset_right = 640.0
+offset_bottom = 360.0
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 298.0
+offset_top = 158.0
+offset_right = 339.0
+offset_bottom = 200.0
+texture_normal = SubResource("CanvasTexture_2sacl")

@@ -55,3 +55,16 @@ func buttonHovered(button: Button, sprite2d: Sprite2D):
 		sprite2d.visible = false
 		startTween(button, "scale", Vector2.ONE, tween_duration)
 		startTween(sprite2d, "scale", Vector2.ONE * tween_intensity, tween_duration)
+
+func buttonHousePressed():
+	get_tree().change_scene_to_file("res://house_screen.tscn")
+
+func buttonBakeryPressed():
+	get_tree().change_scene_to_file("res://bakery_screen.tscn")
+
+func buttonParkPressed():
+	get_tree().change_scene_to_file("res://park_screen.tscn")
+
+func buttonExitPressed():
+	#Add are you sure pop up window then yes or no and close
+	get_tree().quit()

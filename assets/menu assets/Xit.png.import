@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bj6bhk78pxdi0"
-path="res://.godot/imported/Bakery.png-319a5ef3b7b18e0d5cf818134c4c1bec.ctex"
+uid="uid://dfig4yu6weq1g"
+path="res://.godot/imported/Xit.png-a49d63ba80f91288481b8a350a80621e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Bakery.png"
-dest_files=["res://.godot/imported/Bakery.png-319a5ef3b7b18e0d5cf818134c4c1bec.ctex"]
+source_file="res://assets/menu assets/Xit.png"
+dest_files=["res://.godot/imported/Xit.png-a49d63ba80f91288481b8a350a80621e.ctex"]
 
 [params]
 

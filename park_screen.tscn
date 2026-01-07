@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://lsctiakuayif"]
+
+[ext_resource type="Texture2D" uid="uid://cjxmoeqiokcqo" path="res://assets/menu assets/Park.png" id="1_bqwo1"]
+
+[node name="ParkScreen" type="Panel"]
+offset_right = 640.0
+offset_bottom = 360.0
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 289.0
+offset_top = 162.0
+offset_right = 337.0
+offset_bottom = 202.0
+texture_normal = ExtResource("1_bqwo1")
