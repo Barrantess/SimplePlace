@@ -1,15 +1,271 @@
-[gd_scene load_steps=2 format=3 uid="uid://lsctiakuayif"]
+[gd_scene load_steps=26 format=3 uid="uid://lsctiakuayif"]
 
-[ext_resource type="Texture2D" uid="uid://cjxmoeqiokcqo" path="res://assets/menu assets/Park.png" id="1_bqwo1"]
+[ext_resource type="Script" uid="uid://ddiisa7xs56hj" path="res://scripts/park_screen.gd" id="1_303mq"]
+[ext_resource type="Texture2D" uid="uid://bh6wkoixw0mv5" path="res://assets/park assets/ParkBG.png" id="2_7se37"]
+[ext_resource type="Texture2D" uid="uid://8jbjn27ukxlq" path="res://assets/glow.png" id="3_4b30a"]
+[ext_resource type="Texture2D" uid="uid://hwtx4yw338dq" path="res://assets/park assets/hole.png" id="4_r73tp"]
+[ext_resource type="Texture2D" uid="uid://butcco6yjk1vu" path="res://assets/park assets/police.png" id="5_7se37"]
+[ext_resource type="Texture2D" uid="uid://d307g87ji2ema" path="res://assets/park assets/policeD1.png" id="6_yqhc6"]
+[ext_resource type="Texture2D" uid="uid://cd8snsipcnpuh" path="res://assets/park assets/dogGameBG.png" id="7_25krr"]
+[ext_resource type="Texture2D" uid="uid://cuon5dak4igsx" path="res://assets/park assets/done.png" id="8_6gwgk"]
+[ext_resource type="Texture2D" uid="uid://ic40mnp8ones" path="res://assets/park assets/flatOP.png" id="9_i2w70"]
+[ext_resource type="Texture2D" uid="uid://bdhkh5tsktbh7" path="res://assets/park assets/stella.png" id="9_lgov7"]
+[ext_resource type="Texture2D" uid="uid://bflxf26bob06u" path="res://assets/park assets/flatOPBlack.png" id="10_hwvt1"]
+[ext_resource type="Texture2D" uid="uid://dxem440m1aucn" path="res://assets/park assets/taco.png" id="10_pahp3"]
+[ext_resource type="Texture2D" uid="uid://cshastwlc7j2a" path="res://assets/park assets/enrique.png" id="11_2vv46"]
+[ext_resource type="Texture2D" uid="uid://cqaooq7uyun5x" path="res://assets/park assets/flatOPBrown.png" id="11_4j6cd"]
+[ext_resource type="Texture2D" uid="uid://va2tv2xm1002" path="res://assets/park assets/flatOPWhite.png" id="12_466rt"]
+[ext_resource type="Texture2D" uid="uid://b0u7bskao6k0l" path="res://assets/park assets/Dogs/bigEmptyDog.png" id="12_ef2sf"]
+[ext_resource type="Texture2D" uid="uid://52eh0vfen3u5" path="res://assets/park assets/flatOPCream.png" id="13_8in62"]
+[ext_resource type="Texture2D" uid="uid://cpog47qd17126" path="res://assets/park assets/Dogs/mediumEmptyDog.png" id="13_xevan"]
+[ext_resource type="Texture2D" uid="uid://cpl0w5v3ng6j" path="res://assets/park assets/Dogs/smallEmptyDog.png" id="14_fgox5"]
+[ext_resource type="Texture2D" uid="uid://dcmn4rp3uhuth" path="res://assets/park assets/spotOPBlack.png" id="16_lonle"]
+[ext_resource type="Texture2D" uid="uid://80mmbw5a11el" path="res://assets/park assets/spotOPWhite.png" id="17_abepc"]
+[ext_resource type="Texture2D" uid="uid://dg28toqewhkek" path="res://assets/park assets/spotOPBrown.png" id="18_k53ji"]
+[ext_resource type="Texture2D" uid="uid://b5xvsipi1w6gh" path="res://assets/park assets/spotOPCream.png" id="19_fdagd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lgov7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3seq4"]
 
 [node name="ParkScreen" type="Panel"]
 offset_right = 640.0
 offset_bottom = 360.0
+script = ExtResource("1_303mq")
+tween_intensity = 1.1
+tween_duration = 1.0
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="BG" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 289.0
-offset_top = 162.0
-offset_right = 337.0
+offset_right = 640.0
+offset_bottom = 360.0
+texture = ExtResource("2_7se37")
+
+[node name="GlowHole" type="Sprite2D" parent="."]
+position = Vector2(211.5, 125.5)
+scale = Vector2(0.28999993, 0.29000008)
+texture = ExtResource("3_4b30a")
+
+[node name="GlowPolice" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(587.00006, 217.99998)
+scale = Vector2(0.56500036, 0.5699999)
+texture = ExtResource("3_4b30a")
+
+[node name="holeButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 193.0
+offset_top = 105.0
+offset_right = 233.0
+offset_bottom = 145.0
+icon = ExtResource("4_r73tp")
+flat = true
+
+[node name="policeButton" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 566.0
+offset_top = 192.0
+offset_right = 606.0
+offset_bottom = 248.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lgov7")
+icon = ExtResource("5_7se37")
+flat = true
+
+[node name="PoliceD1" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(49, 308)
+texture = ExtResource("6_yqhc6")
+
+[node name="DogGameBg" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(473, 151)
+texture = ExtResource("7_25krr")
+
+[node name="DogBG" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 90.0
+offset_top = 71.0
+offset_right = 319.0
+offset_bottom = 280.0
+color = Color(1, 1, 1, 0.6431373)
+
+[node name="Done" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 440.0
+offset_top = 307.0
+offset_right = 523.0
+offset_bottom = 347.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3seq4")
+icon = ExtResource("8_6gwgk")
+flat = true
+
+[node name="Stella" type="TextureButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 532.0
+offset_top = 238.0
+offset_right = 576.0
+offset_bottom = 257.0
+texture_normal = ExtResource("9_lgov7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Taco" type="TextureButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 477.0
+offset_top = 236.0
+offset_right = 521.0
+offset_bottom = 255.0
+texture_normal = ExtResource("10_pahp3")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Enrique" type="TextureButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 419.0
+offset_top = 237.0
+offset_right = 463.0
+offset_bottom = 256.0
+texture_normal = ExtResource("11_2vv46")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="bigDog" type="TextureButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 381.0
+offset_top = 42.0
+offset_right = 438.0
+offset_bottom = 96.0
+texture_normal = ExtResource("12_ef2sf")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="mediumDog" type="TextureButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 444.0
+offset_top = 42.0
+offset_right = 497.0
+offset_bottom = 94.0
+texture_normal = ExtResource("13_xevan")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="smallDog" type="TextureButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 492.0
+offset_top = 46.0
+offset_right = 556.0
+offset_bottom = 105.0
+texture_normal = ExtResource("14_fgox5")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SpotColorNone" type="TextureButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 398.0
+offset_top = 176.0
+offset_right = 417.0
+offset_bottom = 194.0
+texture_normal = ExtResource("9_i2w70")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SpotColorBlack" type="TextureButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 430.0
+offset_top = 178.0
+offset_right = 449.0
+offset_bottom = 196.0
+texture_normal = ExtResource("16_lonle")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SpotColorWhite" type="TextureButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 464.0
+offset_top = 179.0
+offset_right = 483.0
+offset_bottom = 197.0
+texture_normal = ExtResource("17_abepc")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SpotColorBrown" type="TextureButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 502.0
+offset_top = 181.0
+offset_right = 521.0
+offset_bottom = 199.0
+texture_normal = ExtResource("18_k53ji")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SpotColorCream" type="TextureButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 547.0
+offset_top = 184.0
+offset_right = 566.0
 offset_bottom = 202.0
-texture_normal = ExtResource("1_bqwo1")
+texture_normal = ExtResource("19_fdagd")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="FlatColorCream" type="TextureButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 544.0
+offset_top = 127.0
+offset_right = 563.0
+offset_bottom = 145.0
+texture_normal = ExtResource("13_8in62")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="FlatColorBrown" type="TextureButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 480.0
+offset_top = 126.0
+offset_right = 499.0
+offset_bottom = 144.0
+texture_normal = ExtResource("11_4j6cd")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="FlatColorWhite" type="TextureButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 430.0
+offset_top = 125.0
+offset_right = 449.0
+offset_bottom = 143.0
+texture_normal = ExtResource("12_466rt")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="FlatColorBlack" type="TextureButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 387.0
+offset_top = 125.0
+offset_right = 406.0
+offset_bottom = 143.0
+texture_normal = ExtResource("10_hwvt1")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="holeButton" to="." method="callDogAnim"]
+[connection signal="pressed" from="policeButton" to="." method="callDogGame"]
