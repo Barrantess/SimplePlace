@@ -1,5 +1,8 @@
 extends TileMap
 
+@onready var score_label: Label = $CanvasLayer/score_label
+@onready var turns_label: Label = $CanvasLayer/turns_label
+
 var board_size = 4
 enum Layers{hidden,revealed}
 var SOURCE_NUM = 1
@@ -10,11 +13,10 @@ var tilepos_to_atlaspos = {}
 var score = 0
 var turns_taken = 0
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	setup_board()
-#	update_text()
+	update_text()
 	pass # Replace with function body.
 
 func get_tiles_to_use():
@@ -29,6 +31,8 @@ func get_tiles_to_use():
 	return chosen_tile_coords
 
 func setup_board():
+	score_label.visible = true
+	turns_label.visible = true
 	var cards_to_use = get_tiles_to_use()
 	for y in range(board_size):
 		for x in range(board_size):

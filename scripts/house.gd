@@ -7,10 +7,13 @@ extends Panel
 @onready var table: Button = $table
 @onready var glow_tocadiscos: Sprite2D = $GlowMusic
 @onready var glow_table: Sprite2D = $GlowTable
-
+@onready var score_label: Label = $TileMap/CanvasLayer/score_label
+@onready var turns_label: Label = $TileMap/CanvasLayer/turns_label
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	score_label.visible = false
+	turns_label.visible = false
 	pass # Replace with function body.
 
 
@@ -54,3 +57,4 @@ func buttonHovered(button: Button, sprite2d: Sprite2D):
 
 func callMemory():
 	get_tree().change_scene_to_file("res://tile_map.tscn")
+	
