@@ -30,6 +30,39 @@ extends Panel
 @onready var flatWhite: TextureButton = $FlatColorWhite
 @onready var flatBlack: TextureButton = $FlatColorBlack
 
+#Sprites dogs
+@onready var bigDogEmpty: Sprite2D = $BigEmptyDog
+@onready var bigDogBlack: Sprite2D = $BigBlackDog
+@onready var bigDogBrown: Sprite2D = $BigBrownDog
+@onready var bigDogCream: Sprite2D = $BigCreamDog
+@onready var bigDogWhite: Sprite2D = $BigWhiteDog
+@onready var bigDogSpotsBlack: Sprite2D = $BigBlackSpots
+@onready var bigDogSpotsBrown: Sprite2D = $BigBrownSpots
+@onready var bigDogSpotsCream: Sprite2D = $BigCreamSpots
+@onready var bigDogSpotsWhite: Sprite2D = $BigWhiteSpots
+
+@onready var mediumDogEmpty: Sprite2D = $MediumEmptyDog
+@onready var mediumDogBlack: Sprite2D = $MediumBlackDog
+@onready var mediumDogBrown: Sprite2D = $MediumBrownDog
+@onready var mediumDogCream: Sprite2D = $MediumCreamDog
+@onready var mediumDogWhite: Sprite2D = $MediumWhiteDog
+@onready var mediumDogSpotsBlack: Sprite2D = $MediumBlackSpots
+@onready var mediumDogSpotsBrown: Sprite2D = $MediumBrownSpots
+@onready var mediumDogSpotsCream: Sprite2D = $MediumCreamSpots
+@onready var mediumDogSpotsWhite: Sprite2D = $MediumWhiteSpots
+
+@onready var smallDogEmpty: Sprite2D = $SmallEmptyDog
+@onready var smallDogBlack: Sprite2D = $Smallblackdog
+@onready var smallDogBrown: Sprite2D = $Smallbrowndog
+@onready var smallDogCream: Sprite2D = $Smallcreamdog
+@onready var smallDogWhite: Sprite2D = $Smallwhitedog
+@onready var smallDogSpotsBlack: Sprite2D = $Smallblackspots
+@onready var smallDogSpotsBrown: Sprite2D = $Smallbrownspots
+@onready var smallDogSpotsCream: Sprite2D = $Smallcreamspots
+@onready var smallDogSpotsWhite: Sprite2D = $Smallwhitespots
+
+@export var size_selected: bool = false
+@export var flat_selected: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -92,3 +125,475 @@ func callDogGame():
 	flatBrown.visible = true
 	flatWhite.visible = true
 	flatBlack.visible = true
+	
+func callBigEmptyDog():
+	size_selected = true
+	bigDogEmpty.visible = true
+	mediumDogEmpty.visible = false
+	smallDogEmpty.visible = false
+	bigDogBlack.visible = false
+	bigDogBrown.visible = false
+	bigDogCream.visible = false
+	bigDogWhite.visible = false
+	mediumDogBlack.visible = false
+	mediumDogBrown.visible = false
+	mediumDogCream.visible = false
+	mediumDogWhite.visible = false
+	smallDogBlack.visible = false
+	smallDogBrown.visible = false
+	smallDogCream.visible = false
+	smallDogWhite.visible = false
+	bigDogSpotsBlack.visible = false
+	bigDogSpotsBrown.visible = false
+	bigDogSpotsCream.visible = false
+	bigDogSpotsWhite.visible = false
+	mediumDogSpotsBlack.visible = false
+	mediumDogSpotsBrown.visible = false
+	mediumDogSpotsCream.visible = false
+	mediumDogSpotsWhite.visible = false
+	smallDogSpotsBlack.visible = false
+	smallDogSpotsBrown.visible = false
+	smallDogSpotsCream.visible = false
+	smallDogSpotsWhite.visible = false
+
+func callMediumEmptyDog():
+	size_selected = true
+	bigDogEmpty.visible = false
+	mediumDogEmpty.visible = true
+	smallDogEmpty.visible = false
+	bigDogBlack.visible = false
+	bigDogBrown.visible = false
+	bigDogCream.visible = false
+	bigDogWhite.visible = false
+	mediumDogBlack.visible = false
+	mediumDogBrown.visible = false
+	mediumDogCream.visible = false
+	mediumDogWhite.visible = false
+	smallDogBlack.visible = false
+	smallDogBrown.visible = false
+	smallDogCream.visible = false
+	smallDogWhite.visible = false
+	bigDogSpotsBlack.visible = false
+	bigDogSpotsBrown.visible = false
+	bigDogSpotsCream.visible = false
+	bigDogSpotsWhite.visible = false
+	mediumDogSpotsBlack.visible = false
+	mediumDogSpotsBrown.visible = false
+	mediumDogSpotsCream.visible = false
+	mediumDogSpotsWhite.visible = false
+	smallDogSpotsBlack.visible = false
+	smallDogSpotsBrown.visible = false
+	smallDogSpotsCream.visible = false
+	smallDogSpotsWhite.visible = false
+	
+func callSmallEmptyDog():
+	size_selected = true
+	bigDogEmpty.visible = false
+	mediumDogEmpty.visible = false
+	smallDogEmpty.visible = true
+	bigDogBlack.visible = false
+	bigDogBrown.visible = false
+	bigDogCream.visible = false
+	bigDogWhite.visible = false
+	mediumDogBlack.visible = false
+	mediumDogBrown.visible = false
+	mediumDogCream.visible = false
+	mediumDogWhite.visible = false
+	smallDogBlack.visible = false
+	smallDogBrown.visible = false
+	smallDogCream.visible = false
+	smallDogWhite.visible = false
+	bigDogSpotsBlack.visible = false
+	bigDogSpotsBrown.visible = false
+	bigDogSpotsCream.visible = false
+	bigDogSpotsWhite.visible = false
+	mediumDogSpotsBlack.visible = false
+	mediumDogSpotsBrown.visible = false
+	mediumDogSpotsCream.visible = false
+	mediumDogSpotsWhite.visible = false
+	smallDogSpotsBlack.visible = false
+	smallDogSpotsBrown.visible = false
+	smallDogSpotsCream.visible = false
+	smallDogSpotsWhite.visible = false
+	
+func callFlatBlack():
+	flat_selected = true
+	if size_selected == true:
+		if bigDogEmpty.visible == true:
+			bigDogBlack.visible = true
+			bigDogBrown.visible = false
+			bigDogCream.visible = false
+			bigDogWhite.visible = false
+			mediumDogBlack.visible = false
+			mediumDogBrown.visible = false
+			mediumDogCream.visible = false
+			mediumDogWhite.visible = false
+			smallDogBlack.visible = false
+			smallDogBrown.visible = false
+			smallDogCream.visible = false
+			smallDogWhite.visible = false
+		if mediumDogEmpty.visible == true:
+			bigDogBlack.visible = false
+			bigDogBrown.visible = false
+			bigDogCream.visible = false
+			bigDogWhite.visible = false
+			mediumDogBlack.visible = true
+			mediumDogBrown.visible = false
+			mediumDogCream.visible = false
+			mediumDogWhite.visible = false
+			smallDogBlack.visible = false
+			smallDogBrown.visible = false
+			smallDogCream.visible = false
+			smallDogWhite.visible = false
+		if smallDogEmpty.visible == true:
+			bigDogBlack.visible = false
+			bigDogBrown.visible = false
+			bigDogCream.visible = false
+			bigDogWhite.visible = false
+			mediumDogBlack.visible = false
+			mediumDogBrown.visible = false
+			mediumDogCream.visible = false
+			mediumDogWhite.visible = false
+			smallDogBlack.visible = true
+			smallDogBrown.visible = false
+			smallDogCream.visible = false
+			smallDogWhite.visible = false
+
+func callFlatBrown():
+	flat_selected = true
+	if size_selected == true:
+		if bigDogEmpty.visible == true:
+			bigDogBlack.visible = false
+			bigDogBrown.visible = true
+			bigDogCream.visible = false
+			bigDogWhite.visible = false
+			mediumDogBlack.visible = false
+			mediumDogBrown.visible = false
+			mediumDogCream.visible = false
+			mediumDogWhite.visible = false
+			smallDogBlack.visible = false
+			smallDogBrown.visible = false
+			smallDogCream.visible = false
+			smallDogWhite.visible = false
+		if mediumDogEmpty.visible == true:
+			bigDogBlack.visible = false
+			bigDogBrown.visible = false
+			bigDogCream.visible = false
+			bigDogWhite.visible = false
+			mediumDogBlack.visible = false
+			mediumDogBrown.visible = true
+			mediumDogCream.visible = false
+			mediumDogWhite.visible = false
+			smallDogBlack.visible = false
+			smallDogBrown.visible = false
+			smallDogCream.visible = false
+			smallDogWhite.visible = false
+		if smallDogEmpty.visible == true:
+			bigDogBlack.visible = false
+			bigDogBrown.visible = false
+			bigDogCream.visible = false
+			bigDogWhite.visible = false
+			mediumDogBlack.visible = false
+			mediumDogBrown.visible = false
+			mediumDogCream.visible = false
+			mediumDogWhite.visible = false
+			smallDogBlack.visible = false
+			smallDogBrown.visible = true
+			smallDogCream.visible = false
+			smallDogWhite.visible = false
+
+func callFlatCream():
+	flat_selected = true
+	if size_selected == true:
+		if bigDogEmpty.visible == true:
+			bigDogBlack.visible = false
+			bigDogBrown.visible = false
+			bigDogCream.visible = true
+			bigDogWhite.visible = false
+			mediumDogBlack.visible = false
+			mediumDogBrown.visible = false
+			mediumDogCream.visible = false
+			mediumDogWhite.visible = false
+			smallDogBlack.visible = false
+			smallDogBrown.visible = false
+			smallDogCream.visible = false
+			smallDogWhite.visible = false
+		if mediumDogEmpty.visible == true:
+			bigDogBlack.visible = false
+			bigDogBrown.visible = false
+			bigDogCream.visible = false
+			bigDogWhite.visible = false
+			mediumDogBlack.visible = false
+			mediumDogBrown.visible = false
+			mediumDogCream.visible = true
+			mediumDogWhite.visible = false
+			smallDogBlack.visible = false
+			smallDogBrown.visible = false
+			smallDogCream.visible = false
+			smallDogWhite.visible = false
+		if smallDogEmpty.visible == true:
+			bigDogBlack.visible = false
+			bigDogBrown.visible = false
+			bigDogCream.visible = false
+			bigDogWhite.visible = false
+			mediumDogBlack.visible = false
+			mediumDogBrown.visible = false
+			mediumDogCream.visible = false
+			mediumDogWhite.visible = false
+			smallDogBlack.visible = false
+			smallDogBrown.visible = false
+			smallDogCream.visible = true
+			smallDogWhite.visible = false
+
+func callFlatWhite():
+	flat_selected = true
+	if size_selected == true:
+		if bigDogEmpty.visible == true:
+			bigDogBlack.visible = false
+			bigDogBrown.visible = false
+			bigDogCream.visible = false
+			bigDogWhite.visible = true
+			mediumDogBlack.visible = false
+			mediumDogBrown.visible = false
+			mediumDogCream.visible = false
+			mediumDogWhite.visible = false
+			smallDogBlack.visible = false
+			smallDogBrown.visible = false
+			smallDogCream.visible = false
+			smallDogWhite.visible = false
+		if mediumDogEmpty.visible == true:
+			bigDogBlack.visible = false
+			bigDogBrown.visible = false
+			bigDogCream.visible = false
+			bigDogWhite.visible = false
+			mediumDogBlack.visible = false
+			mediumDogBrown.visible = false
+			mediumDogCream.visible = false
+			mediumDogWhite.visible = true
+			smallDogBlack.visible = false
+			smallDogBrown.visible = false
+			smallDogCream.visible = false
+			smallDogWhite.visible = false
+		if smallDogEmpty.visible == true:
+			bigDogBlack.visible = false
+			bigDogBrown.visible = false
+			bigDogCream.visible = false
+			bigDogWhite.visible = false
+			mediumDogBlack.visible = false
+			mediumDogBrown.visible = false
+			mediumDogCream.visible = false
+			mediumDogWhite.visible = false
+			smallDogBlack.visible = false
+			smallDogBrown.visible = false
+			smallDogCream.visible = false
+			smallDogWhite.visible = true
+
+func callSpotsNone():
+	if size_selected == true and flat_selected:
+		if bigDogEmpty.visible:
+			bigDogSpotsBlack.visible = false
+			bigDogSpotsBrown.visible = false
+			bigDogSpotsCream.visible = false
+			bigDogSpotsWhite.visible = false
+			mediumDogSpotsBlack.visible = false
+			mediumDogSpotsBrown.visible = false
+			mediumDogSpotsCream.visible = false
+			mediumDogSpotsWhite.visible = false
+			smallDogSpotsBlack.visible = false
+			smallDogSpotsBrown.visible = false
+			smallDogSpotsCream.visible = false
+			smallDogSpotsWhite.visible = false
+		if mediumDogEmpty.visible == true:
+			bigDogSpotsBlack.visible = false
+			bigDogSpotsBrown.visible = false
+			bigDogSpotsCream.visible = false
+			bigDogSpotsWhite.visible = false
+			mediumDogSpotsBlack.visible = false
+			mediumDogSpotsBrown.visible = false
+			mediumDogSpotsCream.visible = false
+			mediumDogSpotsWhite.visible = false
+			smallDogSpotsBlack.visible = false
+			smallDogSpotsBrown.visible = false
+			smallDogSpotsCream.visible = false
+			smallDogSpotsWhite.visible = false
+		if smallDogEmpty.visible == true:
+			bigDogSpotsBlack.visible = false
+			bigDogSpotsBrown.visible = false
+			bigDogSpotsCream.visible = false
+			bigDogSpotsWhite.visible = false
+			mediumDogSpotsBlack.visible = false
+			mediumDogSpotsBrown.visible = false
+			mediumDogSpotsCream.visible = false
+			mediumDogSpotsWhite.visible = false
+			smallDogSpotsBlack.visible = false
+			smallDogSpotsBrown.visible = false
+			smallDogSpotsCream.visible = false
+			smallDogSpotsWhite.visible = false
+			
+func callSpotsBlack():
+	if size_selected == true and flat_selected:
+		if bigDogEmpty.visible:
+			bigDogSpotsBlack.visible = true
+			bigDogSpotsBrown.visible = false
+			bigDogSpotsCream.visible = false
+			bigDogSpotsWhite.visible = false
+			mediumDogSpotsBlack.visible = false
+			mediumDogSpotsBrown.visible = false
+			mediumDogSpotsCream.visible = false
+			mediumDogSpotsWhite.visible = false
+			smallDogSpotsBlack.visible = false
+			smallDogSpotsBrown.visible = false
+			smallDogSpotsCream.visible = false
+			smallDogSpotsWhite.visible = false
+		if mediumDogEmpty.visible == true:
+			bigDogSpotsBlack.visible = false
+			bigDogSpotsBrown.visible = false
+			bigDogSpotsCream.visible = false
+			bigDogSpotsWhite.visible = false
+			mediumDogSpotsBlack.visible = true
+			mediumDogSpotsBrown.visible = false
+			mediumDogSpotsCream.visible = false
+			mediumDogSpotsWhite.visible = false
+			smallDogSpotsBlack.visible = false
+			smallDogSpotsBrown.visible = false
+			smallDogSpotsCream.visible = false
+			smallDogSpotsWhite.visible = false
+		if smallDogEmpty.visible == true:
+			bigDogSpotsBlack.visible = false
+			bigDogSpotsBrown.visible = false
+			bigDogSpotsCream.visible = false
+			bigDogSpotsWhite.visible = false
+			mediumDogSpotsBlack.visible = false
+			mediumDogSpotsBrown.visible = false
+			mediumDogSpotsCream.visible = false
+			mediumDogSpotsWhite.visible = false
+			smallDogSpotsBlack.visible = true
+			smallDogSpotsBrown.visible = false
+			smallDogSpotsCream.visible = false
+			smallDogSpotsWhite.visible = false
+			
+func callSpotsBrown():
+	if size_selected == true and flat_selected:
+		if bigDogEmpty.visible:
+			bigDogSpotsBlack.visible = false
+			bigDogSpotsBrown.visible = true
+			bigDogSpotsCream.visible = false
+			bigDogSpotsWhite.visible = false
+			mediumDogSpotsBlack.visible = false
+			mediumDogSpotsBrown.visible = false
+			mediumDogSpotsCream.visible = false
+			mediumDogSpotsWhite.visible = false
+			smallDogSpotsBlack.visible = false
+			smallDogSpotsBrown.visible = false
+			smallDogSpotsCream.visible = false
+			smallDogSpotsWhite.visible = false
+		if mediumDogEmpty.visible == true:
+			bigDogSpotsBlack.visible = false
+			bigDogSpotsBrown.visible = false
+			bigDogSpotsCream.visible = false
+			bigDogSpotsWhite.visible = false
+			mediumDogSpotsBlack.visible = false
+			mediumDogSpotsBrown.visible = true
+			mediumDogSpotsCream.visible = false
+			mediumDogSpotsWhite.visible = false
+			smallDogSpotsBlack.visible = false
+			smallDogSpotsBrown.visible = false
+			smallDogSpotsCream.visible = false
+			smallDogSpotsWhite.visible = false
+		if smallDogEmpty.visible == true:
+			bigDogSpotsBlack.visible = false
+			bigDogSpotsBrown.visible = false
+			bigDogSpotsCream.visible = false
+			bigDogSpotsWhite.visible = false
+			mediumDogSpotsBlack.visible = false
+			mediumDogSpotsBrown.visible = false
+			mediumDogSpotsCream.visible = false
+			mediumDogSpotsWhite.visible = false
+			smallDogSpotsBlack.visible = false
+			smallDogSpotsBrown.visible = true
+			smallDogSpotsCream.visible = false
+			smallDogSpotsWhite.visible = false
+
+func callSpotsCream():
+	if size_selected == true and flat_selected:
+		if bigDogEmpty.visible:
+			bigDogSpotsBlack.visible = false
+			bigDogSpotsBrown.visible = false
+			bigDogSpotsCream.visible = true
+			bigDogSpotsWhite.visible = false
+			mediumDogSpotsBlack.visible = false
+			mediumDogSpotsBrown.visible = false
+			mediumDogSpotsCream.visible = false
+			mediumDogSpotsWhite.visible = false
+			smallDogSpotsBlack.visible = false
+			smallDogSpotsBrown.visible = false
+			smallDogSpotsCream.visible = false
+			smallDogSpotsWhite.visible = false
+		if mediumDogEmpty.visible == true:
+			bigDogSpotsBlack.visible = false
+			bigDogSpotsBrown.visible = false
+			bigDogSpotsCream.visible = false
+			bigDogSpotsWhite.visible = false
+			mediumDogSpotsBlack.visible = false
+			mediumDogSpotsBrown.visible = false
+			mediumDogSpotsCream.visible = true
+			mediumDogSpotsWhite.visible = false
+			smallDogSpotsBlack.visible = false
+			smallDogSpotsBrown.visible = false
+			smallDogSpotsCream.visible = false
+			smallDogSpotsWhite.visible = false
+		if smallDogEmpty.visible == true:
+			bigDogSpotsBlack.visible = false
+			bigDogSpotsBrown.visible = false
+			bigDogSpotsCream.visible = false
+			bigDogSpotsWhite.visible = false
+			mediumDogSpotsBlack.visible = false
+			mediumDogSpotsBrown.visible = false
+			mediumDogSpotsCream.visible = false
+			mediumDogSpotsWhite.visible = false
+			smallDogSpotsBlack.visible = false
+			smallDogSpotsBrown.visible = false
+			smallDogSpotsCream.visible = true
+			smallDogSpotsWhite.visible = false
+
+func callSpotsWhite():
+	if size_selected == true and flat_selected:
+		if bigDogEmpty.visible:
+			bigDogSpotsBlack.visible = false
+			bigDogSpotsBrown.visible = false
+			bigDogSpotsCream.visible = false
+			bigDogSpotsWhite.visible = true
+			mediumDogSpotsBlack.visible = false
+			mediumDogSpotsBrown.visible = false
+			mediumDogSpotsCream.visible = false
+			mediumDogSpotsWhite.visible = false
+			smallDogSpotsBlack.visible = false
+			smallDogSpotsBrown.visible = false
+			smallDogSpotsCream.visible = false
+			smallDogSpotsWhite.visible = false
+		if mediumDogEmpty.visible == true:
+			bigDogSpotsBlack.visible = false
+			bigDogSpotsBrown.visible = false
+			bigDogSpotsCream.visible = false
+			bigDogSpotsWhite.visible = false
+			mediumDogSpotsBlack.visible = false
+			mediumDogSpotsBrown.visible = false
+			mediumDogSpotsCream.visible = false
+			mediumDogSpotsWhite.visible = true
+			smallDogSpotsBlack.visible = false
+			smallDogSpotsBrown.visible = false
+			smallDogSpotsCream.visible = false
+			smallDogSpotsWhite.visible = false
+		if smallDogEmpty.visible == true:
+			bigDogSpotsBlack.visible = false
+			bigDogSpotsBrown.visible = false
+			bigDogSpotsCream.visible = false
+			bigDogSpotsWhite.visible = false
+			mediumDogSpotsBlack.visible = false
+			mediumDogSpotsBrown.visible = false
+			mediumDogSpotsCream.visible = false
+			mediumDogSpotsWhite.visible = false
+			smallDogSpotsBlack.visible = false
+			smallDogSpotsBrown.visible = false
+			smallDogSpotsCream.visible = false
+			smallDogSpotsWhite.visible = true

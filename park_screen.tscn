@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://lsctiakuayif"]
+[gd_scene load_steps=50 format=3 uid="uid://lsctiakuayif"]
 
 [ext_resource type="Script" uid="uid://ddiisa7xs56hj" path="res://scripts/park_screen.gd" id="1_303mq"]
 [ext_resource type="Texture2D" uid="uid://bh6wkoixw0mv5" path="res://assets/park assets/ParkBG.png" id="2_7se37"]
@@ -23,6 +23,30 @@
 [ext_resource type="Texture2D" uid="uid://80mmbw5a11el" path="res://assets/park assets/spotOPWhite.png" id="17_abepc"]
 [ext_resource type="Texture2D" uid="uid://dg28toqewhkek" path="res://assets/park assets/spotOPBrown.png" id="18_k53ji"]
 [ext_resource type="Texture2D" uid="uid://b5xvsipi1w6gh" path="res://assets/park assets/spotOPCream.png" id="19_fdagd"]
+[ext_resource type="Texture2D" uid="uid://c7lpvf17sn4ah" path="res://assets/park assets/Dogs/flat colors/bigBlackDog.png" id="24_f2pe1"]
+[ext_resource type="Texture2D" uid="uid://cje2dtdsx4113" path="res://assets/park assets/Dogs/flat colors/bigBrownDog.png" id="25_8abis"]
+[ext_resource type="Texture2D" uid="uid://blti5gjqicqrn" path="res://assets/park assets/Dogs/flat colors/bigCreamDog.png" id="26_xe8n2"]
+[ext_resource type="Texture2D" uid="uid://1yktehu4kp8d" path="res://assets/park assets/Dogs/flat colors/bigWhiteDog.png" id="27_tcubx"]
+[ext_resource type="Texture2D" uid="uid://wvsvovhqfv5p" path="res://assets/park assets/Dogs/spots/bigBlackSpots.png" id="28_lvxj0"]
+[ext_resource type="Texture2D" uid="uid://b21iyo7c8pxbt" path="res://assets/park assets/Dogs/spots/bigBrownSpots.png" id="29_r0lb0"]
+[ext_resource type="Texture2D" uid="uid://2i6rlvt1dkbm" path="res://assets/park assets/Dogs/spots/bigCreamSpots.png" id="30_ta1qg"]
+[ext_resource type="Texture2D" uid="uid://c8gvj802g7f4f" path="res://assets/park assets/Dogs/spots/bigWhiteSpots.png" id="31_nnwks"]
+[ext_resource type="Texture2D" uid="uid://d22pydf83u1ox" path="res://assets/park assets/Dogs/flat colors/mediumBlackDog.png" id="32_i2lkk"]
+[ext_resource type="Texture2D" uid="uid://cw537mr4yk45c" path="res://assets/park assets/Dogs/flat colors/mediumBrownDog.png" id="33_1p7ke"]
+[ext_resource type="Texture2D" uid="uid://bpr1nfvv3fm5u" path="res://assets/park assets/Dogs/flat colors/mediumCreamDog.png" id="34_q3wp0"]
+[ext_resource type="Texture2D" uid="uid://biixqacnvxk6x" path="res://assets/park assets/Dogs/flat colors/mediumWhiteDog.png" id="35_8qjbi"]
+[ext_resource type="Texture2D" uid="uid://bxeqy53gmiqyf" path="res://assets/park assets/Dogs/spots/mediumBlackSpots.png" id="36_rrrnr"]
+[ext_resource type="Texture2D" uid="uid://b67m1cgmo5py5" path="res://assets/park assets/Dogs/spots/mediumBrownSpots.png" id="37_yr1h4"]
+[ext_resource type="Texture2D" uid="uid://4s5dpmly8a3i" path="res://assets/park assets/Dogs/spots/mediumCreamSpots.png" id="38_txfix"]
+[ext_resource type="Texture2D" uid="uid://cy718mjujpg" path="res://assets/park assets/Dogs/spots/mediumWhiteSpots.png" id="39_d34ht"]
+[ext_resource type="Texture2D" uid="uid://cvb0871ngal80" path="res://assets/park assets/Dogs/flat colors/smallblackdog.png" id="40_rlvt6"]
+[ext_resource type="Texture2D" uid="uid://c6s86ndyxk1im" path="res://assets/park assets/Dogs/flat colors/smallbrowndog.png" id="41_oh5g5"]
+[ext_resource type="Texture2D" uid="uid://fxk3mlep8h3o" path="res://assets/park assets/Dogs/flat colors/smallcreamdog.png" id="42_x3jkr"]
+[ext_resource type="Texture2D" uid="uid://dfwrklnyi7s0b" path="res://assets/park assets/Dogs/flat colors/smallwhitedog.png" id="43_idg0a"]
+[ext_resource type="Texture2D" uid="uid://cjo4kuu3oru7h" path="res://assets/park assets/Dogs/spots/smallblackspots.png" id="44_yax2t"]
+[ext_resource type="Texture2D" uid="uid://civmt4p4fwex0" path="res://assets/park assets/Dogs/spots/smallbrownspots.png" id="45_gfr6v"]
+[ext_resource type="Texture2D" uid="uid://d2j7vtufu68ih" path="res://assets/park assets/Dogs/spots/smallcreamspots.png" id="46_whrrn"]
+[ext_resource type="Texture2D" uid="uid://86fy4lkx08y1" path="res://assets/park assets/Dogs/spots/smallwhitespots.png" id="47_ob0lc"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lgov7"]
 
@@ -74,7 +98,8 @@ flat = true
 
 [node name="PoliceD1" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(49, 308)
+position = Vector2(166.00002, 320)
+scale = Vector2(3.8733332, 0.8066666)
 texture = ExtResource("6_yqhc6")
 
 [node name="DogGameBg" type="Sprite2D" parent="."]
@@ -85,10 +110,10 @@ texture = ExtResource("7_25krr")
 [node name="DogBG" type="ColorRect" parent="."]
 visible = false
 layout_mode = 0
-offset_left = 90.0
-offset_top = 71.0
-offset_right = 319.0
-offset_bottom = 280.0
+offset_left = 54.0
+offset_top = 64.0
+offset_right = 283.0
+offset_bottom = 273.0
 color = Color(1, 1, 1, 0.6431373)
 
 [node name="Done" type="Button" parent="."]
@@ -267,5 +292,152 @@ texture_normal = ExtResource("10_hwvt1")
 ignore_texture_size = true
 stretch_mode = 0
 
+[node name="BigBlackDog" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(169, 171)
+texture = ExtResource("24_f2pe1")
+
+[node name="BigBrownDog" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(169, 171)
+texture = ExtResource("25_8abis")
+
+[node name="BigCreamDog" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(169, 171)
+texture = ExtResource("26_xe8n2")
+
+[node name="BigWhiteDog" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(169, 171)
+texture = ExtResource("27_tcubx")
+
+[node name="BigBlackSpots" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(169, 171)
+texture = ExtResource("28_lvxj0")
+
+[node name="BigBrownSpots" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(169, 171)
+texture = ExtResource("29_r0lb0")
+
+[node name="BigCreamSpots" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(169, 171)
+texture = ExtResource("30_ta1qg")
+
+[node name="BigWhiteSpots" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(169, 171)
+texture = ExtResource("31_nnwks")
+
+[node name="BigEmptyDog" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(169, 171)
+texture = ExtResource("12_ef2sf")
+
+[node name="MediumBlackDog" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(164, 172)
+texture = ExtResource("32_i2lkk")
+
+[node name="MediumBrownDog" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(164, 172)
+texture = ExtResource("33_1p7ke")
+
+[node name="MediumCreamDog" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(164, 172)
+texture = ExtResource("34_q3wp0")
+
+[node name="MediumWhiteDog" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(164, 172)
+texture = ExtResource("35_8qjbi")
+
+[node name="MediumBlackSpots" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(164, 172)
+texture = ExtResource("36_rrrnr")
+
+[node name="MediumBrownSpots" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(164, 172)
+texture = ExtResource("37_yr1h4")
+
+[node name="MediumCreamSpots" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(164, 172)
+texture = ExtResource("38_txfix")
+
+[node name="MediumWhiteSpots" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(164, 172)
+texture = ExtResource("39_d34ht")
+
+[node name="MediumEmptyDog" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(164, 172)
+texture = ExtResource("13_xevan")
+
+[node name="Smallblackdog" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(170, 198)
+texture = ExtResource("40_rlvt6")
+
+[node name="Smallbrowndog" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(170, 198)
+texture = ExtResource("41_oh5g5")
+
+[node name="Smallcreamdog" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(170, 198)
+texture = ExtResource("42_x3jkr")
+
+[node name="Smallwhitedog" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(170, 198)
+texture = ExtResource("43_idg0a")
+
+[node name="Smallblackspots" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(170, 198)
+texture = ExtResource("44_yax2t")
+
+[node name="Smallbrownspots" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(170, 198)
+texture = ExtResource("45_gfr6v")
+
+[node name="Smallcreamspots" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(170, 198)
+texture = ExtResource("46_whrrn")
+
+[node name="Smallwhitespots" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(170, 198)
+texture = ExtResource("47_ob0lc")
+
+[node name="SmallEmptyDog" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(170, 198)
+texture = ExtResource("14_fgox5")
+
 [connection signal="pressed" from="holeButton" to="." method="callDogAnim"]
 [connection signal="pressed" from="policeButton" to="." method="callDogGame"]
+[connection signal="pressed" from="bigDog" to="." method="callBigEmptyDog"]
+[connection signal="pressed" from="mediumDog" to="." method="callMediumEmptyDog"]
+[connection signal="pressed" from="smallDog" to="." method="callSmallEmptyDog"]
+[connection signal="pressed" from="SpotColorNone" to="." method="callSpotsNone"]
+[connection signal="pressed" from="SpotColorBlack" to="." method="callSpotsBlack"]
+[connection signal="pressed" from="SpotColorWhite" to="." method="callSpotsWhite"]
+[connection signal="pressed" from="SpotColorBrown" to="." method="callSpotsBrown"]
+[connection signal="pressed" from="SpotColorCream" to="." method="callSpotsCream"]
+[connection signal="pressed" from="FlatColorCream" to="." method="callFlatCream"]
+[connection signal="pressed" from="FlatColorBrown" to="." method="callFlatBrown"]
+[connection signal="pressed" from="FlatColorWhite" to="." method="callFlatWhite"]
+[connection signal="pressed" from="FlatColorBlack" to="." method="callFlatBlack"]
