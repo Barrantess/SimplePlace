@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bx2kcdo4p4v61"]
+[gd_scene load_steps=6 format=3 uid="uid://bx2kcdo4p4v61"]
 
 [ext_resource type="Texture2D" uid="uid://b7qpnybsjhtly" path="res://assets/house assets/cards.png" id="1_1n30v"]
 [ext_resource type="Script" uid="uid://xy4ust134ln0" path="res://scripts/tile_map.gd" id="2_35kre"]
+[ext_resource type="Texture2D" uid="uid://bol430k7aka1y" path="res://assets/house assets/memoryBG.png" id="3_35kre"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_35kre"]
 texture = ExtResource("1_1n30v")
@@ -32,6 +33,12 @@ layer_0/name = "hidden"
 layer_0/z_index = 5
 layer_1/name = "revealed"
 script = ExtResource("2_35kre")
+
+[node name="MemoryBg" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(320.5, 172)
+scale = Vector2(1.7861111, 1.0500001)
+texture = ExtResource("3_35kre")
 
 [node name="@TileMapLayer@54496" type="TileMapLayer" parent="."]
 use_parent_material = true

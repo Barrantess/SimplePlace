@@ -1,15 +1,115 @@
-[gd_scene load_steps=2 format=3 uid="uid://vp8vb2nlcear"]
+[gd_scene load_steps=14 format=3 uid="uid://vp8vb2nlcear"]
 
-[ext_resource type="Texture2D" uid="uid://bj6bhk78pxdi0" path="res://assets/menu assets/Bakery.png" id="1_f5lxx"]
+[ext_resource type="Texture2D" uid="uid://o0ur5ha3ml4a" path="res://assets/bakery assets/bakeryBG.png" id="1_6ahm5"]
+[ext_resource type="Script" uid="uid://dkyuou8cgyh5p" path="res://bakery_screen.gd" id="1_blq6a"]
+[ext_resource type="Texture2D" uid="uid://pgmvuow0ljug" path="res://assets/bakery assets/flour.png" id="2_6a3ef"]
+[ext_resource type="Texture2D" uid="uid://dyr88bhon6wsr" path="res://assets/bakery assets/oven.png" id="3_blq6a"]
+[ext_resource type="Texture2D" uid="uid://ckrwtsocst4ub" path="res://assets/bakery assets/olla.png" id="4_i3s64"]
+[ext_resource type="Texture2D" uid="uid://ydivk20pia20" path="res://assets/bakery assets/notebook.png" id="5_akbpv"]
+[ext_resource type="Texture2D" uid="uid://8jbjn27ukxlq" path="res://assets/glow.png" id="6_i3s64"]
+[ext_resource type="Texture2D" uid="uid://bgjx38teawyfj" path="res://assets/bakery assets/exclamation.png" id="8_i3s64"]
+[ext_resource type="Texture2D" uid="uid://cfhmhdy4rdh65" path="res://assets/GoBack.png" id="9_owdg4"]
+[ext_resource type="Texture2D" uid="uid://wvra4fpbkep5" path="res://assets/bakery assets/notebookopen.png" id="10_2qvyh"]
+[ext_resource type="Texture2D" uid="uid://c0x78uyhvlskv" path="res://assets/bakery assets/wordCroissant.png" id="11_vapxr"]
+[ext_resource type="Texture2D" uid="uid://b41m161c6wult" path="res://assets/bakery assets/wordCinnamonrolls.png" id="12_6sixw"]
+[ext_resource type="Texture2D" uid="uid://burnekkg8y4co" path="res://assets/bakery assets/wordPretzel.png" id="13_pxjg1"]
 
 [node name="BakeryScreen" type="Panel"]
 offset_right = 640.0
 offset_bottom = 360.0
+script = ExtResource("1_blq6a")
+tween_intensity = 1.1
+tween_duration = 1.2
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="BakeryBG" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 293.0
-offset_top = 162.0
-offset_right = 341.0
-offset_bottom = 202.0
-texture_normal = ExtResource("1_f5lxx")
+offset_right = 640.0
+offset_bottom = 360.0
+texture = ExtResource("1_6ahm5")
+
+[node name="Ingredients" type="Button" parent="."]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 120.0
+offset_right = 120.0
+offset_bottom = 203.0
+icon = ExtResource("2_6a3ef")
+flat = true
+
+[node name="Oven" type="Button" parent="."]
+layout_mode = 0
+offset_left = 392.0
+offset_top = 233.0
+offset_right = 500.0
+offset_bottom = 316.0
+icon = ExtResource("3_blq6a")
+flat = true
+
+[node name="Olla" type="Button" parent="."]
+layout_mode = 0
+offset_left = 233.0
+offset_top = 121.0
+offset_right = 316.0
+offset_bottom = 204.0
+icon = ExtResource("4_i3s64")
+flat = true
+
+[node name="GlowNotebook" type="Sprite2D" parent="."]
+position = Vector2(38, 36)
+scale = Vector2(0.6, 0.59)
+texture = ExtResource("6_i3s64")
+
+[node name="Notebook" type="Button" parent="."]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 14.0
+offset_right = 58.0
+offset_bottom = 54.0
+icon = ExtResource("5_akbpv")
+flat = true
+
+[node name="Exclamation" type="Sprite2D" parent="."]
+position = Vector2(64, 33.25)
+scale = Vector2(0.75, 0.703125)
+texture = ExtResource("8_i3s64")
+
+[node name="GoBack" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 308.0
+offset_right = 84.0
+offset_bottom = 364.0
+icon = ExtResource("9_owdg4")
+flat = true
+
+[node name="Notebookopen" type="Sprite2D" parent="."]
+position = Vector2(316.00003, 179)
+scale = Vector2(1.1783333, 1.1316665)
+texture = ExtResource("10_2qvyh")
+
+[node name="Croissant" type="Button" parent="."]
+layout_mode = 0
+offset_left = 155.0
+offset_top = 95.0
+offset_right = 242.0
+offset_bottom = 151.0
+icon = ExtResource("11_vapxr")
+flat = true
+
+[node name="CinnamonRoll" type="Button" parent="."]
+layout_mode = 0
+offset_left = 151.0
+offset_top = 164.0
+offset_right = 250.0
+offset_bottom = 220.0
+icon = ExtResource("12_6sixw")
+flat = true
+
+[node name="Pretzel" type="Button" parent="."]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 236.0
+offset_right = 260.0
+offset_bottom = 292.0
+icon = ExtResource("13_pxjg1")
+flat = true

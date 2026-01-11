@@ -2,6 +2,7 @@ extends TileMap
 
 @onready var score_label: Label = $CanvasLayer/score_label
 @onready var turns_label: Label = $CanvasLayer/turns_label
+@onready var background: Sprite2D = $MemoryBg
 
 var board_size = 4
 enum Layers{hidden,revealed}
@@ -33,6 +34,7 @@ func get_tiles_to_use():
 func setup_board():
 	score_label.visible = true
 	turns_label.visible = true
+	background.visible = true
 	var cards_to_use = get_tiles_to_use()
 	for y in range(board_size):
 		for x in range(board_size):

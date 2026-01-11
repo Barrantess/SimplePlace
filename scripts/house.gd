@@ -9,11 +9,13 @@ extends Panel
 @onready var glow_table: Sprite2D = $GlowTable
 @onready var score_label: Label = $TileMap/CanvasLayer/score_label
 @onready var turns_label: Label = $TileMap/CanvasLayer/turns_label
+@onready var memoryBG: Sprite2D = $TileMap/MemoryBg
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	score_label.visible = false
 	turns_label.visible = false
+	memoryBG.visible = false
 	pass # Replace with function body.
 
 
