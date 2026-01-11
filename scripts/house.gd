@@ -21,11 +21,6 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	glow_tocadiscos.visible = false
-	if tocadiscos.is_hovered():
-		buttonHovered(tocadiscos, glow_tocadiscos)
-	else:
-		buttonHovered(tocadiscos, glow_tocadiscos)
 	if table.is_hovered():
 		buttonHovered(table, glow_table)
 	else:
@@ -38,25 +33,18 @@ func startTween(object: Object, property: String, final_val: Variant, duration: 
 func buttonHovered(button: Button, sprite2d: Sprite2D):
 	button.pivot_offset = button.size / 2
 	sprite2d.visible = false
-	if button == table:
-		if button.is_hovered():
-			sprite2d.visible = true
-			startTween(button, "scale", Vector2.ONE * tween_intensity, tween_duration)
-			startTween(sprite2d, "scale", Vector2.ONE * tween_intensity, tween_duration)
+	if button.is_hovered():
+		sprite2d.visible = true
+		startTween(button, "scale", Vector2.ONE * tween_intensity, tween_duration)
+		startTween(sprite2d, "scale", Vector2.ONE * tween_intensity, tween_duration)
 
-		else:
-			sprite2d.visible = false
-			startTween(button, "scale", Vector2.ONE, tween_duration)
-			startTween(sprite2d, "scale", Vector2.ONE * tween_intensity, tween_duration)
 	else:
-		if button.is_hovered():
-			sprite2d.visible = true
-			startTween(sprite2d, "scale", Vector2.ONE * 0.4, tween_duration)
-
-		else:
-			sprite2d.visible = false
-			startTween(sprite2d, "scale", Vector2.ONE * 0.4, tween_duration)
+		sprite2d.visible = false
+		startTween(button, "scale", Vector2.ONE, tween_duration)
+		startTween(sprite2d, "scale", Vector2.ONE * tween_intensity, tween_duration)
 
 func callMemory():
 	get_tree().change_scene_to_file("res://tile_map.tscn")
-	
+
+func callGoBack():
+	get_tree().change_scene_to_file("res://menu.tscn")

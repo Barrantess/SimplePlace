@@ -1,7 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://vp8vb2nlcear"]
+[gd_scene load_steps=32 format=3 uid="uid://vp8vb2nlcear"]
 
 [ext_resource type="Texture2D" uid="uid://o0ur5ha3ml4a" path="res://assets/bakery assets/bakeryBG.png" id="1_6ahm5"]
-[ext_resource type="Script" uid="uid://dkyuou8cgyh5p" path="res://bakery_screen.gd" id="1_blq6a"]
+[ext_resource type="Script" uid="uid://dkyuou8cgyh5p" path="res://scripts/bakery_screen.gd" id="1_blq6a"]
 [ext_resource type="Texture2D" uid="uid://pgmvuow0ljug" path="res://assets/bakery assets/flour.png" id="2_6a3ef"]
 [ext_resource type="Texture2D" uid="uid://dyr88bhon6wsr" path="res://assets/bakery assets/oven.png" id="3_blq6a"]
 [ext_resource type="Texture2D" uid="uid://ckrwtsocst4ub" path="res://assets/bakery assets/olla.png" id="4_i3s64"]
@@ -10,9 +10,31 @@
 [ext_resource type="Texture2D" uid="uid://bgjx38teawyfj" path="res://assets/bakery assets/exclamation.png" id="8_i3s64"]
 [ext_resource type="Texture2D" uid="uid://cfhmhdy4rdh65" path="res://assets/GoBack.png" id="9_owdg4"]
 [ext_resource type="Texture2D" uid="uid://wvra4fpbkep5" path="res://assets/bakery assets/notebookopen.png" id="10_2qvyh"]
+[ext_resource type="Texture2D" uid="uid://b2e3deym05n72" path="res://assets/bakery assets/close.png" id="11_2qvyh"]
 [ext_resource type="Texture2D" uid="uid://c0x78uyhvlskv" path="res://assets/bakery assets/wordCroissant.png" id="11_vapxr"]
 [ext_resource type="Texture2D" uid="uid://b41m161c6wult" path="res://assets/bakery assets/wordCinnamonrolls.png" id="12_6sixw"]
 [ext_resource type="Texture2D" uid="uid://burnekkg8y4co" path="res://assets/bakery assets/wordPretzel.png" id="13_pxjg1"]
+[ext_resource type="Texture2D" uid="uid://tebdmvbgguls" path="res://assets/bakery assets/bake.png" id="15_v0i6f"]
+[ext_resource type="Texture2D" uid="uid://0veusy8awsff" path="res://assets/bakery assets/croissantRecipe.png" id="16_pykxf"]
+[ext_resource type="Texture2D" uid="uid://d17nfb8r3hp1" path="res://assets/bakery assets/cinnamonrollsRecipe.png" id="17_d78gi"]
+[ext_resource type="Texture2D" uid="uid://by0orhe8gueji" path="res://assets/bakery assets/pretzelsRecipe.png" id="18_oome8"]
+[ext_resource type="Texture2D" uid="uid://q7rsnkie1m63" path="res://assets/bakery assets/Ingredients/IngredientsBG.png" id="19_nh6bq"]
+[ext_resource type="Texture2D" uid="uid://bytgyi0ncgxp5" path="res://assets/bakery assets/Ingredients/insideBowl.png" id="20_6ahtr"]
+[ext_resource type="Texture2D" uid="uid://cwkf6x7kevvux" path="res://assets/bakery assets/Ingredients/insideBowl1.png" id="21_6b8cr"]
+[ext_resource type="Texture2D" uid="uid://cbe0wqnsjtmii" path="res://assets/bakery assets/Ingredients/insideBowl2.png" id="22_rwht4"]
+[ext_resource type="Texture2D" uid="uid://bfbg6dkjll4xt" path="res://assets/bakery assets/Ingredients/insideBowl3.png" id="23_tmlm0"]
+[ext_resource type="Texture2D" uid="uid://clvtqq1tu7pli" path="res://assets/bakery assets/Ingredients/insideBowlbatido.png" id="24_50ntl"]
+[ext_resource type="Script" uid="uid://ci73r30gq3nu8" path="res://scripts/batidor.gd" id="25_dlipq"]
+[ext_resource type="Texture2D" uid="uid://5gnp6npp5crh" path="res://assets/bakery assets/Ingredients/batidor.png" id="26_2ffyl"]
+[ext_resource type="Texture2D" uid="uid://b5l7ry1enaofq" path="res://assets/bakery assets/Ingredients/next.png" id="27_6ahtr"]
+[ext_resource type="Texture2D" uid="uid://bm8scdw0808rg" path="res://assets/bakery assets/ovenON.png" id="28_6b8cr"]
+[ext_resource type="Texture2D" uid="uid://cuon5dak4igsx" path="res://assets/park assets/done.png" id="28_rwht4"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nh6bq"]
+radius = 3.996872
+height = 59.60862
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6b8cr"]
 
 [node name="BakeryScreen" type="Panel"]
 offset_right = 640.0
@@ -27,12 +49,17 @@ offset_right = 640.0
 offset_bottom = 360.0
 texture = ExtResource("1_6ahm5")
 
+[node name="GlowIngredients" type="Sprite2D" parent="."]
+position = Vector2(77, 159)
+scale = Vector2(0.80249995, 0.8749999)
+texture = ExtResource("6_i3s64")
+
 [node name="Ingredients" type="Button" parent="."]
 layout_mode = 0
-offset_left = 37.0
-offset_top = 120.0
-offset_right = 120.0
-offset_bottom = 203.0
+offset_left = 36.0
+offset_top = 119.0
+offset_right = 119.0
+offset_bottom = 202.0
 icon = ExtResource("2_6a3ef")
 flat = true
 
@@ -68,7 +95,7 @@ offset_bottom = 54.0
 icon = ExtResource("5_akbpv")
 flat = true
 
-[node name="Exclamation" type="Sprite2D" parent="."]
+[node name="ExclamationNotebook" type="Sprite2D" parent="."]
 position = Vector2(64, 33.25)
 scale = Vector2(0.75, 0.703125)
 texture = ExtResource("8_i3s64")
@@ -83,11 +110,23 @@ icon = ExtResource("9_owdg4")
 flat = true
 
 [node name="Notebookopen" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(316.00003, 179)
 scale = Vector2(1.1783333, 1.1316665)
 texture = ExtResource("10_2qvyh")
 
+[node name="CloseNotebook" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 178.0
+offset_top = 300.0
+offset_right = 261.0
+offset_bottom = 340.0
+icon = ExtResource("11_2qvyh")
+flat = true
+
 [node name="Croissant" type="Button" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 155.0
 offset_top = 95.0
@@ -97,6 +136,7 @@ icon = ExtResource("11_vapxr")
 flat = true
 
 [node name="CinnamonRoll" type="Button" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 151.0
 offset_top = 164.0
@@ -106,6 +146,7 @@ icon = ExtResource("12_6sixw")
 flat = true
 
 [node name="Pretzel" type="Button" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 161.0
 offset_top = 236.0
@@ -113,3 +154,346 @@ offset_right = 260.0
 offset_bottom = 292.0
 icon = ExtResource("13_pxjg1")
 flat = true
+
+[node name="Bake" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 356.0
+offset_top = 298.0
+offset_right = 439.0
+offset_bottom = 338.0
+icon = ExtResource("15_v0i6f")
+flat = true
+
+[node name="CroissantRecipe" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(404, 170)
+texture = ExtResource("16_pykxf")
+
+[node name="CinnamonrollsRecipe" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(404, 167)
+texture = ExtResource("17_d78gi")
+
+[node name="PretzelsRecipe" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(403, 171)
+texture = ExtResource("18_oome8")
+
+[node name="ExclamationIngredients" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(78, 106)
+texture = ExtResource("8_i3s64")
+
+[node name="IngredientsBg" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(319.75003, 179.74997)
+scale = Vector2(2.0015624, 2.0027776)
+texture = ExtResource("19_nh6bq")
+
+[node name="InsideBowl" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(333.99997, 207)
+scale = Vector2(1.9274193, 1.7960993)
+texture = ExtResource("20_6ahtr")
+
+[node name="InsideBowl1" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(334.5, 206.5)
+scale = Vector2(1.9161292, 1.7943263)
+texture = ExtResource("21_6b8cr")
+
+[node name="InsideBowl2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(335.25, 206.75)
+scale = Vector2(1.932258, 1.783688)
+texture = ExtResource("22_rwht4")
+
+[node name="InsideBowl3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(335.875, 206.375)
+scale = Vector2(1.9370968, 1.7925534)
+texture = ExtResource("23_tmlm0")
+
+[node name="InsideBowlbatido" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(336.25, 206.25)
+scale = Vector2(1.932258, 1.7765957)
+texture = ExtResource("24_50ntl")
+
+[node name="Batidor" type="CharacterBody2D" parent="."]
+visible = false
+position = Vector2(325, 171.00002)
+scale = Vector2(2.0015624, 2.0027776)
+input_pickable = true
+script = ExtResource("25_dlipq")
+
+[node name="Batidor2" type="Sprite2D" parent="Batidor"]
+position = Vector2(52.45903, -11.484062)
+scale = Vector2(0.49960974, 0.4993066)
+texture = ExtResource("26_2ffyl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Batidor"]
+position = Vector2(52.95863, -11.983366)
+rotation = 0.54105204
+shape = SubResource("CapsuleShape2D_nh6bq")
+
+[node name="MasaAplanada" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(345, 205)
+texture = ExtResource("22_rwht4")
+
+[node name="MasaAplanadaCinn" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(345, 205)
+texture = ExtResource("22_rwht4")
+
+[node name="Masa" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(345, 205)
+texture = ExtResource("24_50ntl")
+
+[node name="MasaFiller" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 489.0
+offset_top = 232.0
+offset_right = 563.0
+offset_bottom = 346.0
+icon = ExtResource("26_2ffyl")
+
+[node name="Tabla" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(353, 304)
+texture = ExtResource("3_blq6a")
+
+[node name="Cortadora" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 489.0
+offset_top = 232.0
+offset_right = 497.0
+offset_bottom = 240.0
+icon = ExtResource("26_2ffyl")
+
+[node name="Rodillo" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 489.0
+offset_top = 232.0
+offset_right = 563.0
+offset_bottom = 346.0
+icon = ExtResource("26_2ffyl")
+
+[node name="Next" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 541.0
+offset_top = 308.0
+offset_right = 624.0
+offset_bottom = 348.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6b8cr")
+icon = ExtResource("27_6ahtr")
+flat = true
+
+[node name="Sal" type="TextureButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 14.0
+offset_top = 274.0
+offset_right = 89.0
+offset_bottom = 349.0
+texture_normal = ExtResource("2_6a3ef")
+
+[node name="Flour" type="TextureButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 20.0
+offset_top = 174.0
+offset_right = 95.0
+offset_bottom = 249.0
+texture_normal = ExtResource("2_6a3ef")
+
+[node name="Milk" type="TextureButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 21.0
+offset_top = 85.0
+offset_right = 96.0
+offset_bottom = 160.0
+texture_normal = ExtResource("2_6a3ef")
+
+[node name="Azucar" type="TextureButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 79.0
+offset_top = 274.0
+offset_right = 154.0
+offset_bottom = 349.0
+texture_normal = ExtResource("2_6a3ef")
+
+[node name="Yeast" type="TextureButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 548.0
+offset_top = 269.0
+offset_right = 623.0
+offset_bottom = 344.0
+texture_normal = ExtResource("2_6a3ef")
+
+[node name="Water" type="TextureButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 545.0
+offset_top = 188.0
+offset_right = 620.0
+offset_bottom = 263.0
+texture_normal = ExtResource("2_6a3ef")
+
+[node name="Butter" type="TextureButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 479.0
+offset_top = 268.0
+offset_right = 554.0
+offset_bottom = 343.0
+texture_normal = ExtResource("2_6a3ef")
+
+[node name="Eggs" type="TextureButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 539.0
+offset_top = 111.0
+offset_right = 614.0
+offset_bottom = 186.0
+texture_normal = ExtResource("2_6a3ef")
+
+[node name="Egg" type="TextureButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 477.0
+offset_top = 113.0
+offset_right = 552.0
+offset_bottom = 188.0
+texture_normal = ExtResource("2_6a3ef")
+
+[node name="AzucarCafe" type="TextureButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 81.0
+offset_top = 189.0
+offset_right = 156.0
+offset_bottom = 264.0
+texture_normal = ExtResource("2_6a3ef")
+
+[node name="Canela" type="TextureButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 533.0
+offset_top = 29.0
+offset_right = 608.0
+offset_bottom = 104.0
+texture_normal = ExtResource("2_6a3ef")
+
+[node name="BakingSoda" type="TextureButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 274.0
+offset_top = 7.0
+offset_right = 349.0
+offset_bottom = 82.0
+texture_normal = ExtResource("2_6a3ef")
+
+[node name="Roll" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 466.0
+offset_top = 235.0
+offset_right = 540.0
+offset_bottom = 349.0
+icon = ExtResource("26_2ffyl")
+
+[node name="Form" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 466.0
+offset_top = 235.0
+offset_right = 540.0
+offset_bottom = 349.0
+icon = ExtResource("26_2ffyl")
+
+[node name="Done" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 536.0
+offset_top = 306.0
+offset_right = 619.0
+offset_bottom = 346.0
+icon = ExtResource("28_rwht4")
+flat = true
+
+[node name="MasaCortadaCroissant" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(328, 207)
+texture = ExtResource("24_50ntl")
+
+[node name="MasaCroissant" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(328, 207)
+
+[node name="MasaCinnamonRolls" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(328, 207)
+
+[node name="MasaPretzel" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(328, 207)
+
+[node name="OvenOn" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(304, 199)
+texture = ExtResource("28_6b8cr")
+
+[node name="OvenOff" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(304, 199)
+texture = ExtResource("28_6b8cr")
+
+[node name="MasaCortadaCinn" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(328, 207)
+texture = ExtResource("24_50ntl")
+
+[node name="MasaCortadaPretzel" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(328, 207)
+texture = ExtResource("24_50ntl")
+
+[connection signal="pressed" from="Ingredients" to="." method="callIngredients"]
+[connection signal="pressed" from="Oven" to="." method="callOven"]
+[connection signal="pressed" from="Notebook" to="." method="callNotebook"]
+[connection signal="pressed" from="GoBack" to="." method="callGoBack"]
+[connection signal="pressed" from="CloseNotebook" to="." method="callCloseNotebook"]
+[connection signal="pressed" from="Croissant" to="." method="callSelectCroissantRecipe"]
+[connection signal="pressed" from="CinnamonRoll" to="." method="callSelectCinnamonrollsRecipe"]
+[connection signal="pressed" from="Pretzel" to="." method="callSelectPretzelRecipe"]
+[connection signal="pressed" from="Bake" to="." method="callBake"]
+[connection signal="pressed" from="MasaFiller" to="." method="callMasaFiller"]
+[connection signal="pressed" from="Cortadora" to="." method="callCut"]
+[connection signal="pressed" from="Rodillo" to="." method="callRodillo"]
+[connection signal="pressed" from="Next" to="." method="callNext"]
+[connection signal="pressed" from="Sal" to="." method="callPutSal"]
+[connection signal="pressed" from="Flour" to="." method="callPutFlour"]
+[connection signal="pressed" from="Milk" to="." method="callPutMilk"]
+[connection signal="pressed" from="Azucar" to="." method="callPutAzucar"]
+[connection signal="pressed" from="Yeast" to="." method="callPutYeast"]
+[connection signal="pressed" from="Water" to="." method="callPutWater"]
+[connection signal="pressed" from="Butter" to="." method="callPutButter"]
+[connection signal="pressed" from="Eggs" to="." method="callPutEggs"]
+[connection signal="pressed" from="Egg" to="." method="callPutEgg"]
+[connection signal="pressed" from="AzucarCafe" to="." method="callPutAzucarcafe"]
+[connection signal="pressed" from="Canela" to="." method="callPutCanela"]
+[connection signal="pressed" from="BakingSoda" to="." method="callPutBakingsoda"]
+[connection signal="pressed" from="Roll" to="." method="callRoll"]
+[connection signal="pressed" from="Form" to="." method="callForm"]
+[connection signal="pressed" from="Done" to="." method="callDone"]
